@@ -4,10 +4,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 7rem 9% 2rem;
+  flex-wrap: wrap;
+  gap: 4rem;
 }
 
 .heroContent {
-  max-width: 60rem;
+  max-width: 600px;
+  flex: 1 1 300px;
 }
 
 /* --- Стилі для анімації текстових ліній --- */
@@ -140,6 +143,8 @@
   animation: scaleIn 0.7s ease forwards;
   animation-delay: 2.4s;
   opacity: 0;
+  flex: 1 1 300px;
+  margin: 0 auto;
 }
 
 .heroImage::before {
@@ -159,7 +164,9 @@
 }
 
 .heroImage img {
-  width: 65%;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   object-fit: cover;
 }
 
@@ -205,5 +212,39 @@
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 4rem 5% 2rem;
+  }
+
+  .heroContent h1 {
+    font-size: 3.6rem;
+  }
+
+  .heroContent h3 {
+    font-size: 2.4rem;
+  }
+
+  .heroContent h2 {
+    font-size: 2.2rem;
+  }
+
+  .heroImage {
+    width: 200px;
+    height: 200px;
+  }
+
+  .heroImage img {
+    margin-top: 25px;
+    max-width: 125px;
+  }
+
+  .socialMedia a {
+    margin: 2rem 1rem;
   }
 }
