@@ -33,7 +33,7 @@
 
 .technicalSkills,
 .softSkills {
-  flex: 1 1 45%; /* Allow flex items to grow and shrink, with a base width */
+  flex: 1 1 45%;
   background: var(--second-bg-color);
   padding: 1.5rem;
   border-radius: 1rem;
@@ -88,7 +88,6 @@
   transform: translateY(-5px);
 }
 
-/* Reusing existing keyframes */
 @keyframes slideFromUpBottom {
   0% {
     transform: translateY(-50vh);
@@ -111,7 +110,6 @@
   }
 }
 
-/* Responsive adjustments */
 @media (max-width: 991px) {
   .skillsSection {
     padding: 7rem 4% 2rem;
@@ -126,7 +124,7 @@
 
   .technicalSkills,
   .softSkills {
-    flex: 1 1 100%; /* Stack columns on smaller screens */
+    flex: 1 1 100%;
   }
 
   .heading {

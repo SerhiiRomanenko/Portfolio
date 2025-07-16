@@ -37,7 +37,7 @@
 }
 
 .aboutImg img {
-  width: 65%;
+  width: 80%;
   object-fit: cover;
 }
 
@@ -51,7 +51,7 @@
   margin-bottom: 2rem;
   margin-top: 16px;
   opacity: 0;
-  animation: slideFromUpBottom 0.7s ease forwards; /* Reuse existing animation */
+  animation: slideFromUpBottom 0.7s ease forwards;
   animation-delay: 0.8s;
 }
 
@@ -75,7 +75,7 @@
   line-height: 1.6;
   margin-bottom: 1.5rem;
   opacity: 0;
-  animation: slideFromBottomUp 0.7s ease forwards; /* Reuse existing animation */
+  animation: slideFromBottomUp 0.7s ease forwards;
 }
 
 .paragraph1 {
@@ -111,7 +111,6 @@
   box-shadow: none;
 }
 
-/* Reusing your existing keyframes from Hero.module.css or a global styles file */
 @keyframes slideFromBottomUp {
   0% {
     transform: translateY(50vh);
@@ -156,7 +155,6 @@
   }
 }
 
-/* Responsive adjustments */
 @media (max-width: 991px) {
   .aboutSection {
     flex-direction: column;

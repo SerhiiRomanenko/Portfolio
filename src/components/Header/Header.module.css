@@ -78,7 +78,6 @@
   color: var(--main-color);
 }
 
-/* --- Бургер-меню --- */
 .menuToggle {
   display: none;
 }
@@ -136,12 +135,11 @@
 
   .navbar a {
     margin: 1rem 0;
-    opacity: 1; /* щоб показувались при відкритому меню */
+    opacity: 1;
     animation: none;
   }
 }
 
-/* --- Анімації --- */
 @keyframes slideBackground {
   0% {
     background: transparent;

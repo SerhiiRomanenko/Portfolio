@@ -7,7 +7,6 @@ const Header = () => {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    // Дозволяємо анімацію після монтування
     const timer = setTimeout(() => setReady(true), 100);
     return () => clearTimeout(timer);
   }, []);

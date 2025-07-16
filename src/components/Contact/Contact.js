@@ -1,29 +1,25 @@
-import React, { useState, useEffect } from "react"; // Імпортуємо useEffect
+import React, { useState, useEffect } from "react";
 import styles from "./Contact.module.css";
-import emailjs from "@emailjs/browser"; // Імпортуємо EmailJS
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const [message, setMessage] = useState(null); // Стан для повідомлень користувачу
-  const [messageType, setMessageType] = useState(""); // Тип повідомлення (success/error)
+  const [message, setMessage] = useState(null);
+  const [messageType, setMessageType] = useState("");
 
-  // useEffect для автоматичного приховування повідомлення
   useEffect(() => {
     if (message) {
-      // Якщо є повідомлення
       const timer = setTimeout(() => {
-        setMessage(null); // Очищаємо повідомлення
-        setMessageType(""); // Очищаємо тип повідомлення
-      }, 2000); // Через 1.5 секунди
+        setMessage(null);
+        setMessageType("");
+      }, 2000);
 
-      return () => clearTimeout(timer); // Очищаємо таймер при розмонтуванні компонента або зміні message
+      return () => clearTimeout(timer);
     }
-  }, [message]); // Залежність від message: ефект спрацьовує, коли message змінюється
+  }, [message]);
 
-  // Функція для обробки відправки форми
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Замініть 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', 'YOUR_PUBLIC_KEY' на ваші реальні дані
     const serviceId = "service_ofl5lph";
     const templateId = "template_u21l3gf";
     const publicKey = "qQGABM2Wj9sjgRw40";
@@ -43,7 +39,7 @@ const Contact = () => {
           "Ваше повідомлення відправлено успішно! Я зв'яжуся з вами незабаром."
         );
         setMessageType("success");
-        e.target.reset(); // Очистити форму після успішної відправки
+        e.target.reset();
       },
       (error) => {
         console.log(error.text);
@@ -61,7 +57,6 @@ const Contact = () => {
         Contact <span>Me!</span>
       </h2>
 
-      {/* Повідомлення для користувача */}
       {message && (
         <div className={`${styles.statusMessage} ${styles[messageType]}`}>
           {message}
@@ -72,14 +67,14 @@ const Contact = () => {
         <div className={styles.inputBox}>
           <input
             type="text"
-            name="full_name" // Додано атрибут name для EmailJS
+            name="full_name"
             placeholder="Full Name"
             required
             className={styles.inputField}
           />
           <input
             type="email"
-            name="email_address" // Додано атрибут name для EmailJS
+            name="email_address"
             placeholder="Email Address"
             required
             className={styles.inputField}
@@ -88,22 +83,22 @@ const Contact = () => {
         <div className={styles.inputBox}>
           <input
             type="tel"
-            name="mobile_number" // Додано атрибут name для EmailJS
+            name="mobile_number"
             placeholder="Mobile Number"
             className={styles.inputField}
-            pattern="[0-9]*" // Додано атрибут pattern для введення лише цифр
-            title="Будь ласка, введіть лише цифри" // Підказка при невірному введенні
+            pattern="[0-9]*"
+            title="Будь ласка, введіть лише цифри"
           />
           <input
             type="text"
-            name="email_subject" // Додано атрибут name для EmailJS
+            name="email_subject"
             placeholder="Email Subject"
             required
             className={styles.inputField}
           />
         </div>
         <textarea
-          name="message" // Вже є, але переконайтеся
+          name="message"
           cols="30"
           rows="10"
           placeholder="Your Message"

@@ -13,14 +13,12 @@
   flex: 1 1 300px;
 }
 
-/* --- Стилі для анімації текстових ліній --- */
 .heroContent h3,
 .heroContent h2,
 .heroContent .btn {
   opacity: 0;
 }
 
-/* Каскадна затримка для кожної лінії */
 .line1 {
   animation: slideFromUpBottom 0.7s ease forwards;
   animation-delay: 0.9s;
@@ -72,7 +70,6 @@
   opacity: 0;
 }
 
-/* --- Основні стилі елементів --- */
 .heroContent h3 {
   font-size: 3.2rem;
   font-weight: 700;
@@ -84,7 +81,6 @@
   font-weight: 700;
   margin: -0.3rem 0;
   color: var(--main-color);
-  /* opacity не потрібен тут */
 }
 
 .heroContent h2 {
@@ -132,7 +128,6 @@
   box-shadow: none;
 }
 
-/* --- Анімація зображення --- */
 .heroImage {
   position: relative;
   width: 400px;
@@ -170,7 +165,6 @@
   object-fit: cover;
 }
 
-/* --- Ключові кадри для анімації --- */
 @keyframes slideFromBottomUp {
   0% {
     transform: translateY(50vh);

@@ -1,5 +1,5 @@
 import styles from "./About.module.css";
-import aboutImage from "../../assets/images/profile-pic.png"; // You'll want to add an image for the about section
+import aboutImage from "../../assets/images/profile-pic_2.png"; // You'll want to add an image for the about section
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -36,9 +36,6 @@ const About = () => {
         <Link to="/contact" className={styles.btn}>
           Contact Me
         </Link>
-        {/* <a href="#contact" className={styles.btn}>
-          Contact Me
-        </a> */}
       </div>
     </section>
   );

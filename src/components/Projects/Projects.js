@@ -1,29 +1,27 @@
 import React from "react";
 import styles from "./Projects.module.css";
-import TrailerImg from "../../assets/images/Trailers_screen.jpg"; // Замініть на реальне зображення
-import PortfolioImg from "../../assets/images/Portfolio_screen.jpg"; // Замініть на реальне зображення
-// Імпортуйте іконки, якщо ви хочете використовувати їх для посилань на GitHub/Demo
-// import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import TrailerImg from "../../assets/images/Trailers_screen.jpg";
+import PortfolioImg from "../../assets/images/Portfolio_screen.jpg";
+import MarkupImg from "../../assets/images/Markup_screen.jpg";
 
 const Projects = () => {
-  // Приклад даних для проектів. Замініть їх своїми реальними проектами!
   const projectsData = [
     {
       title: "E-commerce Website",
       description:
         "A full-stack e-commerce platform built with React, Node.js, Express, and MongoDB. Features user authentication, product catalog, shopping cart, and order processing.",
-      image: TrailerImg, // Замініть на реальне зображення
-      githubLink: "https://github.com/SerhiiRomanenko/Online_Strore_Client",
-      demoLink: "https://peaceful-bombolone-4fb17b.netlify.app",
+      image: TrailerImg,
+      githubLink: "https://github.com/SerhiiRomanenko/Trailer_Strore_Client",
+      demoLink: "https://incandescent-salamander-25deb8.netlify.app/",
     },
 
     {
-      title: "Weather Dashboard",
+      title: "Markup (Pet)",
       description:
-        "A weather application that fetches real-time weather data using a third-party API. Displays current weather conditions and a 5-day forecast for any city.",
-      image: "https://placehold.co/600x400/00ABF0/FFFFFF?text=Project+3", // Замініть на реальне зображення
-      githubLink: "https://github.com/your-username/weather-dashboard",
-      demoLink: "https://your-weather-app-demo.com",
+        "A simple pet project website, built with HTML and CSS. This project showcases responsive design and clean markup.",
+      image: MarkupImg,
+      githubLink: "https://github.com/SerhiiRomanenko/MobileFirst",
+      demoLink: "https://serhiiromanenko.github.io/MobileFirst",
     },
     {
       title: (
@@ -33,9 +31,8 @@ const Projects = () => {
       ),
       description:
         "The portfolio website, showcasing my skills and projects, built with React, CSS Modules, and React Router for smooth navigation and animations.",
-      image: PortfolioImg, // Замініть на реальне зображення
-      githubLink: "https://github.com/your-username/personal-portfolio",
-      demoLink: "https://your-portfolio-demo.com",
+      image: PortfolioImg,
+      githubLink: "https://github.com/SerhiiRomanenko/Portfolio",
     },
   ];
 
@@ -64,8 +61,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className={styles.linkIcon}
                   >
-                    <i className="bx bxl-github"></i> {/* Boxicon for GitHub */}
-                    {/* Або <FaGithub /> якщо використовуєте react-icons */}
+                    <i className="bx bxl-github"></i>
                   </a>
                 )}
                 {project.demoLink && (
@@ -76,8 +72,6 @@ const Projects = () => {
                     className={styles.linkIcon}
                   >
                     <i className="bx bx-link-external"></i>{" "}
-                    {/* Boxicon for external link */}
-                    {/* Або <FaExternalLinkAlt /> якщо використовуєте react-icons */}
                   </a>
                 )}
               </div>
