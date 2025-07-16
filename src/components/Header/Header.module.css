@@ -1,0 +1,115 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  border-bottom: 1px solid rgba(0, 171, 240, 0.2);
+  animation: slideBackground 0.8s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* Стилі для частин логотипу */
+.logoPort {
+  color: white; /* Білий колір */
+  font-size: 4rem; /* Більший розмір */
+  letter-spacing: 0.5px; /* Кращий кернінг */
+}
+
+.logoFolio {
+  color: var(--main-color); /* Блакитний колір */
+  font-size: 3rem; /* Більший розмір */
+  letter-spacing: 0.5px; /* Кращий кернінг */
+}
+
+.navbar {
+  position: relative;
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  font-weight: 500;
+  margin-left: 3.5rem;
+  transition: 0.3s;
+  opacity: 0;
+  display: inline-block; /* Ensures transform works correctly */
+}
+
+/* Individual animations for each menu item */
+.navbar a.home {
+  animation: slideFromBottomUp 0.7s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.navbar a.about {
+  animation: slideFromBottomUp 0.7s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.navbar a.projects {
+  animation: slideFromBottomUp 0.7s ease forwards;
+  animation-delay: 0.9s;
+}
+
+.navbar a.skills {
+  animation: slideFromBottomUp 0.7s ease forwards;
+  animation-delay: 1.2s;
+}
+
+.navbar a.contact {
+  animation: slideFromBottomUp 0.7s ease forwards;
+  animation-delay: 1.5s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+}
+
+/* Keyframes for header background */
+@keyframes slideBackground {
+  0% {
+    background: transparent;
+  }
+  100% {
+    background: var(--bg-color);
+  }
+}
+
+/* Keyframes for logo sliding from left */
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Keyframes for menu items sliding from middle of the screen */
+@keyframes slideFromBottomUp {
+  0% {
+    transform: translateY(20vh); /* Start from middle of viewport */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* End at original position in navbar */
+    opacity: 1;
+  }
+}
