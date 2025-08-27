@@ -1,244 +1,296 @@
+@import url("../../variables.css");
+body {
+	background: var(--bg-color);
+	color: #fff;
+	font-family: sans-serif;
+	margin: 0;
+	overflow-x: hidden;
+}
+
 .hero {
-  min-height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 7rem 9% 2rem;
-  flex-wrap: wrap;
-  gap: 4rem;
+	min-height: 100vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 7rem 9% 2rem;
+	gap: 4rem;
 }
 
 .heroContent {
-  max-width: 600px;
-  flex: 1 1 300px;
+	max-width: 600px;
+	flex: 1 1 300px;
 }
 
 .heroContent h3,
 .heroContent h2,
 .heroContent .btn {
-  opacity: 0;
+	opacity: 0;
 }
 
 .line1 {
-  animation: slideFromUpBottom 0.7s ease forwards;
-  animation-delay: 0.9s;
+	animation: slideFromUpBottom 0.7s ease forwards;
+	animation-delay: 0.9s;
 }
 
 .line2Serhii {
-  opacity: 0;
-  animation: slideFromLeftRight 0.7s ease forwards;
-  animation-delay: 1.4s;
-  color: white;
+	opacity: 0;
+	animation: slideFromLeftRight 0.7s ease forwards;
+	animation-delay: 1.4s;
+	color: white;
 }
 
 .line2Romanenko {
-  opacity: 0;
-  animation: slideFromLeftRight 0.7s ease forwards;
-  animation-delay: 1.6s;
+	opacity: 0;
+	animation: slideFromLeftRight 0.7s ease forwards;
+	animation-delay: 1.6s;
 }
 
 .line3 {
-  animation: slideFromBottomUp 0.7s ease forwards;
-  animation-delay: 0.9s;
-  opacity: 0;
+	animation: slideFromBottomUp 0.7s ease forwards;
+	animation-delay: 0.9s;
+	opacity: 0;
 }
 
 .line4__facebook,
 .line4__github,
 .line4__linkedin {
-  opacity: 0;
+	opacity: 0;
 }
 
 .line4__facebook {
-  animation: slideFromLeftRight 0.7s ease forwards;
-  animation-delay: 2.5s;
+	animation: slideFromLeftRight 0.7s ease forwards;
+	animation-delay: 2.5s;
 }
 
 .line4__github {
-  animation: slideFromLeftRight 0.7s ease forwards;
-  animation-delay: 2.2s;
+	animation: slideFromLeftRight 0.7s ease forwards;
+	animation-delay: 2.2s;
 }
 
 .line4__linkedin {
-  animation: slideFromLeftRight 0.7s ease forwards;
-  animation-delay: 1.9s;
+	animation: slideFromLeftRight 0.7s ease forwards;
+	animation-delay: 1.9s;
 }
 
 .line5 {
-  animation: slideFromBottomUp 0.7s ease forwards;
-  animation-delay: 2.4s;
-  opacity: 0;
+	animation: slideFromBottomUp 0.7s ease forwards;
+	animation-delay: 2.4s;
+	opacity: 0;
 }
 
 .heroContent h3 {
-  font-size: 3.2rem;
-  font-weight: 700;
-  line-height: 1.3;
+	font-size: 3.2rem;
+	font-weight: 700;
+	line-height: 1.3;
 }
 
 .heroContent h1 {
-  font-size: 5.6rem;
-  font-weight: 700;
-  margin: -0.3rem 0;
-  color: var(--main-color);
+	font-size: 5.6rem;
+	font-weight: 700;
+	margin: -0.3rem 0;
+	color: var(--main-color);
 }
 
 .heroContent h2 {
-  font-size: 2.8rem;
-  font-weight: 500;
-  margin-bottom: 2rem;
-  position: relative;
+	font-size: 2.8rem;
+	font-weight: 500;
+	margin-bottom: 2rem;
+	position: relative;
 }
 
 .socialMedia a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 4rem;
-  height: 4rem;
-  background: transparent;
-  border: 0.2rem solid var(--main-color);
-  border-radius: 50%;
-  font-size: 2rem;
-  color: var(--main-color);
-  margin: 3rem 1.5rem 3rem 0;
-  transition: 0.5s ease;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 4rem;
+	height: 4rem;
+	background: transparent;
+	border: 0.2rem solid var(--main-color);
+	border-radius: 50%;
+	font-size: 2rem;
+	color: var(--main-color);
+	margin: 3rem 1.5rem 3rem 0;
+	transition: 0.5s ease;
 }
 
 .socialMedia a:hover {
-  background: var(--main-color);
-  color: var(--bg-color);
-  box-shadow: 0 0 1rem var(--main-color);
+	background: var(--main-color);
+	color: var(--bg-color);
+	box-shadow: 0 0 1rem var(--main-color);
 }
 
 .btn {
-  display: inline-block;
-  padding: 1.2rem 2.8rem;
-  background: var(--main-color);
-  border-radius: 4rem;
-  box-shadow: 0 0 1rem var(--main-color);
-  font-size: 1.6rem;
-  color: var(--bg-color);
-  letter-spacing: 0.1rem;
-  font-weight: 600;
-  transition: 0.5s ease;
+	display: inline-block;
+	padding: 1.2rem 2.8rem;
+	background: var(--main-color);
+	border-radius: 4rem;
+	box-shadow: 0 0 1rem var(--main-color);
+	font-size: 1.6rem;
+	color: var(--bg-color);
+	letter-spacing: 0.1rem;
+	font-weight: 600;
+	transition: 0.5s ease;
 }
 
 .btn:hover {
-  box-shadow: none;
+	box-shadow: none;
+}
+
+.heroImageContainer {
+	width: 600px;
+	height: 600px;
+	position: relative;
+	margin-left: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	animation: scaleIn 0.7s ease forwards;
+	animation-delay: 2.4s;
 }
 
 .heroImage {
-  position: relative;
-  width: 400px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: scaleIn 0.7s ease forwards;
-  animation-delay: 2.4s;
-  opacity: 0;
-  flex: 1 1 300px;
-  margin: 0 auto;
-}
-
-.heroImage::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: var(--main-color);
-  border-radius: 58% 42% 38% 62% / 44% 45% 55% 56%;
-  box-shadow: 0 0 2rem var(--main-color);
-  z-index: -1;
-  transition: border-radius 0.7s ease;
-}
-
-.heroImage:hover::before {
-  border-radius: 44% 56% 51% 49% / 58% 50% 50% 42%;
-}
-
-.heroImage img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  object-fit: cover;
+	width: 100%;
+	height: 100%;
 }
 
 @keyframes slideFromBottomUp {
-  0% {
-    transform: translateY(50vh);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+	0% {
+		transform: translateY(50vh);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 
 @keyframes slideFromUpBottom {
-  0% {
-    transform: translateY(-50vh);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+	0% {
+		transform: translateY(-50vh);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 
 @keyframes slideFromLeftRight {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+	0% {
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
 }
 
 @keyframes scaleIn {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
 }
 
+/* Анімації обертання */
+.spinCircleSlow {
+	transform-origin: center;
+	animation: spinCircle 40s linear infinite;
+}
+
+.spinCircleReverse {
+	transform-origin: center;
+	animation: spinCircleReverse 25s linear infinite;
+}
+
+.spinCircleFast {
+	transform-origin: center;
+	animation: spinCircle 15s linear infinite;
+}
+
+@keyframes spinCircle {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spinCircleReverse {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+
+/* 📱 Адаптивні стилі для планшетів (до 1024px) */
+@media (max-width: 1024px) {
+	.hero {
+		padding: 5rem 5% 2rem;
+		gap: 2rem;
+	}
+	.heroImageContainer {
+		width: 400px;
+		height: 400px;
+	}
+	.heroContent h3 {
+		font-size: 2.7rem;
+		margin-bottom: 2rem;
+	}
+	.heroContent h1 {
+		margin-bottom: 2rem;
+		font-size: 5rem;
+	}
+	.heroContent h2 {
+		margin-bottom: 2rem;
+		font-size: 2rem;
+	}
+}
+
+/* 📱 Адаптивні стилі для мобільних пристроїв (до 768px) */
 @media (max-width: 768px) {
-  .hero {
-    flex-direction: column-reverse;
-    text-align: center;
-    padding: 4rem 5% 2rem;
-  }
+	.hero {
+		flex-direction: column-reverse;
+		text-align: center;
+		gap: 1rem;
+		padding: 8rem 5% 2rem;
+	}
+	.heroContent h1 {
+		font-size: 3.6rem;
+		margin-bottom: 2rem;
+	}
+	.heroContent h3 {
+		font-size: 2.4rem;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+	.heroContent h2 {
+		font-size: 2.2rem;
+	}
+	.socialMedia a {
+		margin-top: 2rem;
+		margin: 2rem 1rem;
+	}
+	.heroImageContainer {
+		width: 375px;
+		height: 375px;
+		margin-left: 0;
+	}
+}
 
-  .heroContent h1 {
-    font-size: 3.6rem;
-  }
-
-  .heroContent h3 {
-    font-size: 2.4rem;
-  }
-
-  .heroContent h2 {
-    font-size: 2.2rem;
-  }
-
-  .heroImage {
-    width: 200px;
-    height: 200px;
-  }
-
-  .heroImage img {
-    margin-top: 25px;
-    max-width: 125px;
-  }
-
-  .socialMedia a {
-    margin: 2rem 1rem;
-  }
+/* 📱 Адаптивні стилі для малих мобільних пристроїв (до 480px) */
+@media (max-width: 480px) {
+	.heroImageContainer {
+		width: 300px;
+		height: 300px;
+	}
 }

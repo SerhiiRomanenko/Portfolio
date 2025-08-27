@@ -22,4 +22,10 @@ html {
 body {
   background: var(--bg-color);
   color: var(--text-color);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    width: 0;
+    display: none;
+  }
 }

@@ -1,8 +1,8 @@
-import React from "react";
 import styles from "./Projects.module.css";
 import TrailerImg from "../../assets/images/Trailers_screen.jpg";
 import PortfolioImg from "../../assets/images/Portfolio_screen.jpg";
 import MarkupImg from "../../assets/images/Markup_screen.jpg";
+import MarkupImg2 from "../../assets/images/Markup_screen2.jpg";
 
 const Projects = () => {
   const projectsData = [
@@ -11,10 +11,9 @@ const Projects = () => {
       description:
         "A full-stack e-commerce platform built with React, Node.js, Express, and MongoDB. Features user authentication, product catalog, shopping cart, and order processing.",
       image: TrailerImg,
-      githubLink: "https://github.com/SerhiiRomanenko/Trailer_Strore_Client",
-      demoLink: "https://incandescent-salamander-25deb8.netlify.app/",
+      githubLink: "https://github.com/SerhiiRomanenko/Trailer_Strore_Client_2",
+      demoLink: "https://trailer-strore-client-3.vercel.app/",
     },
-
     {
       title: "Markup (Pet)",
       description:
@@ -33,6 +32,14 @@ const Projects = () => {
         "The portfolio website, showcasing my skills and projects, built with React, CSS Modules, and React Router for smooth navigation and animations.",
       image: PortfolioImg,
       githubLink: "https://github.com/SerhiiRomanenko/Portfolio",
+    },
+    {
+      title: "Markup (Pet-2)",
+      description:
+        "A simple pet project website, built with HTML and CSS. This project showcases responsive design and clean markup.",
+      image: MarkupImg2,
+      githubLink: "https://github.com/SerhiiRomanenko/Sally",
+      demoLink: "https://serhiiromanenko.github.io/Sally/",
     },
   ];
 
